@@ -9,7 +9,7 @@ from pyspark.sql.functions import *
 
 spark = SparkSession.builder.appName('FRIENDS').getOrCreate()
 print('Session created')
-friends = spark.read.csv("file:///C:/spark-3.0.0-preview2-bin-hadoop2.7/pyspark-tutorial-master/fakefriends.csv",header=True)
+friends = spark.read.csv("friends.csv",header=True)
 
 def count(friends):
     total_friends = friends.count()
